@@ -1,0 +1,29 @@
+// Set the font family and size for the title
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  // Style the comment container
+  .comment-container {
+    margin-bottom: 16px;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  // Style the comment title
+  .comment-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  // Style the comment body
+  .comment-body {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  

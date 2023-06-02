@@ -1,0 +1,9 @@
+<h1 class="title">{{ title }}</h1>
+
+<div *ngFor="let comment of api" class="comment-container">
+    <h3 class="comment-title">{{ comment.id }}. {{ comment.name }}</h3>
+    <p  class="comment-body">{{ comment.email }}</p>
+    <p  class="comment-body">{{ comment.body }}</p>
+    <hr>
+</div>
+  

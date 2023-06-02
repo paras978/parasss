@@ -1,0 +1,51 @@
+<form [formGroup]="form" (ngSubmit)="isEdit ? update() : add()">
+    <div>
+      <label>Name</label>
+      <input type="text" formControlName="name" />
+      <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+        <small class="error">Please enter a valid name</small>
+      </div>
+    </div>
+  
+    <div>
+      <label>Email</label>
+      <input type="email" formControlName="email" />
+      <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+        <small class="error">Please enter a valid email address</small>
+      </div>
+    </div>
+  
+    <div>
+      <label>Message</label>
+      <textarea formControlName="message"></textarea>
+      <div *ngIf="form.get('message')?.invalid && form.get('message')?.touched">
+        <small class="error">Please enter a message</small>
+      </div>
+    </div>
+  
+    <button type="submit" [disabled]="form.invalid">{{ isEdit ? 'Update' : 'Add' }}</button>
+</form>
+
+<table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Message</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let message of data">
+        <td>{{ message.name }}</td>
+        <td>{{ message.email }}</td>
+        <td>{{ message.message }}</td>
+        <td>
+            <button (click)="edit(message)">Edit</button>
+            <button (click)="delete(message)">Delete</button>
+          </td>
+      </tr>
+    </tbody>
+</table>
+  
+  
